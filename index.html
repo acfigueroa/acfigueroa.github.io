@@ -951,41 +951,42 @@ a:focus-visible {
 
    <!-- PROFESSIONAL AFFILIATIONS -->
 
+
 <style>
     .professional-affiliations {
         width: 100%;
-        max-width: 760px;
-        margin: 50px auto 0;
+        margin: 40px 0 0;
         box-sizing: border-box;
     }
 
     .affiliation-grid {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 15px;
-        margin-top: 25px;
+        grid-template-columns: repeat(3, minmax(0, 140px));
+        gap: 12px;
+        max-width: 444px;
+        margin: 20px 0 0;
     }
 
     .affiliation {
         background: #e9e2ed;
-        border-radius: 10px;
-        padding: 22px 12px;
+        border-radius: 8px;
+        padding: 14px 8px;
         text-align: center;
         color: #51445f;
         font-family: 'Cormorant Garamond', serif;
-        font-size: 26px;
+        font-size: 24px;
         box-sizing: border-box;
     }
 
     .affiliation small {
         font-family: 'DM Sans', sans-serif;
-        font-size: 12px;
+        font-size: 11px;
         color: #67615d;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 480px) {
         .affiliation-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 140px));
         }
     }
 </style>
@@ -1003,38 +1004,33 @@ a:focus-visible {
     <div class="affiliation-grid">
 
         <div class="affiliation">
-            CASP<br>
-            <small>Member</small>
+            CASP<br><small>Member</small>
         </div>
 
         <div class="affiliation">
-            ASA<br>
-            <small>Member</small>
+            ASA<br><small>Member</small>
         </div>
 
         <div class="affiliation">
-            INSAR<br>
-            <small>Member</small>
+            INSAR<br><small>Member</small>
         </div>
 
         <div class="affiliation">
-            SPABA<br>
-            <small>Member</small>
+            SPABA<br><small>Member</small>
         </div>
 
         <div class="affiliation">
-            ISHA<br>
-            <small>Member</small>
+            ISHA<br><small>Member</small>
         </div>
 
         <div class="affiliation">
-            NSSLHA<br>
-            <small>Member</small>
+            NSSLHA<br><small>Member</small>
         </div>
 
     </div>
 
 </div>
+    
 <!-- BEYOND THE GARDEN -->
 
 <section class="oat" id="community">
