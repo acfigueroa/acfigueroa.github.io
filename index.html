@@ -485,7 +485,27 @@ a:focus-visible {
         transition: none !important;
     }
 }
+.about-intro {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
 
+.about-brain {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    margin: auto;
+    mix-blend-mode: multiply;
+}
+
+@media (max-width: 700px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+}
+    
 </style>
 </head>
 
@@ -585,7 +605,8 @@ a:focus-visible {
     <div class="eyebrow">
         01 / A little about me
     </div>
-
+<div class="about-intro">
+    <div>
     <h2>
         Rooted in curiosity.<br>
         Growing through connection.
@@ -614,6 +635,13 @@ a:focus-visible {
         perspective worth understanding, embracing,
         and celebrating.
     </p>
+            </div>
+
+    <img src="c15a12f5-7b9a-41fb-93ec-011affa1713d.png"
+         class="about-brain"
+         alt="Illustration of the human brain">
+
+</div>
 
     <hr class="section-divider">
 
