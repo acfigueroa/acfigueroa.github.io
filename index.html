@@ -505,6 +505,29 @@ a:focus-visible {
         grid-template-columns: 1fr;
     }
 }
+    .academic-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+}
+
+.academic-image {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: 4px;
+    margin: auto;
+}
+
+@media (max-width: 700px) {
+    .academic-layout {
+        grid-template-columns: 1fr;
+    }
+}
     
 </style>
 </head>
@@ -652,8 +675,8 @@ a:focus-visible {
 
     <h2>My academic roots.</h2>
 
-    <div class="about-intro">
-
+    <div class="academic-layout">
+        
     <div class="timeline">
 
         <div class="timeline-entry">
@@ -714,10 +737,19 @@ a:focus-visible {
 
             <p>Speech and Hearing Science</p>
 
-            <p class="institution">
+                 <p class="institution">
                 University of Illinois Urbana-Champaign
             </p>
 
+        </div>
+
+            </div>
+        
+            <img
+                src="pkJtngW023XyeCUyfdatufGzkjjoaAC2S4duY8I1HySZGEQC0TB3d78_lNLoj_6kneNUjgWQSGwKCNjUUclOGBa7V7l1eH5rR4ilGnolXJc5uSzQLFrzmaE0HdxSKw17VN4Kz_47-t_oTW4igXrT0zlkSnLwp2fvXJLixyokITw7NNHeDrcrHd_bvtMNuU8T.jpeg"
+                class="academic-image"
+                alt="Academic inspiration">
+        
         </div>
 
         <img
