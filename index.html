@@ -1,13 +1,562 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Alicia Celeste Figueroa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alicia Celeste Figueroa | Researcher</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --ivory: #faf8f4;
+    --oat: #eee9e2;
+    --lavender: #e9e2ed;
+    --plum: #51445f;
+    --ink: #38332f;
+    --muted: #67615d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--ink);
+    font: 16px/1.75 'DM Sans', sans-serif;
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    line-height: 1.08;
+    margin: 0 0 20px;
+}
+
+h1 {
+    font-size: clamp(3.3rem, 7vw, 6rem);
+}
+
+h2 {
+    font-size: clamp(2.4rem, 4vw, 3.7rem);
+}
+
+h3 {
+    font-size: 1.9rem;
+}
+
+p {
+    max-width: 720px;
+    color: var(--muted);
+}
+
+a {
+    color: var(--plum);
+}
+
+header {
+    border-bottom: 1px solid #ded8d0;
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    font-size: 2.6rem;
+    margin: 0;
+    text-decoration: none;
+}
+
+.links {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: .86rem;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 5%;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 65px;
+    align-items: center;
+    min-height: 620px;
+}
+
+.eyebrow {
+    font-size: .72rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--plum);
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.credentials {
+    color: var(--plum);
+    letter-spacing: .08em;
+}
+
+.rule {
+    width: 64px;
+    border: 0;
+    border-top: 2px solid #9c89ae;
+    margin: 28px 0;
+}
+
+.tagline {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 2.1rem;
+    line-height: 1.2;
+    color: var(--ink);
+}
+
+.portrait {
+    aspect-ratio: 3/4;
+    background: var(--lavender);
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    color: var(--plum);
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 4rem;
+}
+
+.portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: 1px solid var(--plum);
+    text-decoration: none;
+    font-size: .85rem;
+    transition: .2s ease;
+}
+
+.primary {
+    background: var(--plum);
+    color: white;
+}
+
+.button:hover {
+    background: var(--lavender);
+    color: var(--plum);
+}
+
+.oat {
+    background: var(--oat);
+}
+
+.lavender {
+    background: var(--lavender);
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 36px;
+}
+
+.research-card {
+    border: 1px solid #ded8d0;
+    padding: 30px;
+    transition: .25s ease;
+}
+
+.research-card:hover {
+    background: var(--lavender);
+    transform: translateY(-3px);
+}
+
+.research-card svg {
+    width: 36px;
+    height: 36px;
+    stroke: var(--plum);
+    fill: none;
+    stroke-width: 1.4;
+    margin-bottom: 18px;
+}
+
+.number {
+    float: right;
+    color: var(--plum);
+    font-size: .75rem;
+}
+
+.research-card p {
+    margin-bottom: 0;
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+footer {
+    border-top: 1px solid #ded8d0;
+    padding: 25px 5%;
+    font-size: .8rem;
+    color: var(--muted);
+    text-align: center;
+}
+
+a:focus-visible {
+    outline: 3px solid #9c89ae;
+    outline-offset: 4px;
+}
+
+@media(max-width: 700px) {
+    .hero, .cards, .two {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        gap: 30px;
+        min-height: 0;
+    }
+
+    .wrap {
+        padding: 55px 6%;
+    }
+
+    .portrait {
+        max-width: 360px;
+        width: 100%;
+    }
+
+    .links {
+        gap: 14px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <h1>Alicia Celeste Figueroa</h1>
-    <h2>Researcher | Educator | Behavior Analyst</h2>
-    <p>Welcome to my personal website!</p>
-    <p>Exploring the intersections of language,
-    cognition, behavior, and neurodevelopment.</p>
+
+<header>
+<nav>
+    <a class="brand" href="#home">acf.</a>
+
+    <div class="links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#scholarship">Scholarship</a>
+        <a href="#teaching">Teaching & Leadership</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+</header>
+
+<main>
+
+<!-- HOME -->
+
+<section class="wrap hero" id="home">
+
+<div>
+    <div class="eyebrow">
+        Researcher · Educator · Behavior Analyst
+    </div>
+
+    <h1>Alicia Celeste<br>Figueroa</h1>
+
+    <div class="credentials">
+        M.S., BCBA, LBA, IBA
+    </div>
+
+    <hr class="rule">
+
+    <p class="tagline">
+        Understanding the diversity of human communication.
+    </p>
+
+    <p>
+        Doctoral student in Communication Sciences and Disorders
+        at Northwestern University.
+    </p>
+
+    <div class="actions">
+        <a class="button primary" href="#research">
+            Explore my research
+        </a>
+
+        <a class="button" href="#cv">
+            Curriculum vitae
+        </a>
+    </div>
+</div>
+
+<div class="portrait">
+    acf.
+</div>
+
+</section>
+
+<!-- ABOUT ME -->
+
+<section class="oat" id="about">
+<div class="wrap">
+
+    <div class="eyebrow">
+        01 / A little about me
+    </div>
+
+    <h2>
+        Driven by curiosity.<br>
+        Grounded in connection.
+    </h2>
+
+    <p>
+        My academic journey brings together communication
+        sciences, developmental research, and behavior analysis.
+        I am interested in understanding the many ways people
+        communicate, connect, and experience the world.
+    </p>
+
+    <p>
+        Through interdisciplinary scholarship, I hope to
+        contribute to a deeper understanding of individual
+        differences in language and cognition and to support
+        meaningful, individualized, neurodiversity-affirming
+        practices.
+    </p>
+
+</div>
+</section>
+
+<!-- RESEARCH -->
+
+<section class="wrap" id="research">
+
+    <div class="eyebrow">
+        02 / Research & Scholarship
+    </div>
+
+    <h2>What I explore</h2>
+
+    <div class="cards">
+
+        <article class="research-card">
+
+            <span class="number">01</span>
+
+            <svg viewBox="0 0 32 32">
+                <path d="M16 7C10 0 3 7 5 13C0 19 6 27 12 25L16 28V7M16 7C22 0 29 7 27 13C32 19 26 27 20 25L16 28M5 13L11 15M27 13L21 15"/>
+            </svg>
+
+            <h3>Autism & Neurodevelopment</h3>
+
+            <p>
+                Understanding individual differences in
+                developmental and communication profiles.
+            </p>
+
+        </article>
+
+        <article class="research-card">
+
+            <span class="number">02</span>
+
+            <svg viewBox="0 0 32 32">
+                <path d="M2 4H24V20H12L5 26V20H2ZM26 10H30V26H20L16 30V24M7 12H19"/>
+            </svg>
+
+            <h3>Language & Social Communication</h3>
+
+            <p>
+                Exploring pragmatics, prosody, and the
+                diversity of interpersonal communication.
+            </p>
+
+        </article>
+
+        <article class="research-card">
+
+            <span class="number">03</span>
+
+            <svg viewBox="0 0 32 32">
+                <path d="M8 2C8 16 24 16 24 30M24 2C24 16 8 16 8 30M9 6H23M12 11H20M12 21H20M9 26H23"/>
+            </svg>
+
+            <h3>Genetics & Cognition</h3>
+
+            <p>
+                Examining relationships between genetic
+                variation, language, and cognition.
+            </p>
+
+        </article>
+
+        <article class="research-card">
+
+            <span class="number">04</span>
+
+            <svg viewBox="0 0 32 32">
+                <circle cx="16" cy="6" r="4"/>
+                <circle cx="6" cy="25" r="4"/>
+                <circle cx="26" cy="25" r="4"/>
+                <path d="M14 10L8 21M18 10L24 21M10 25H22"/>
+            </svg>
+
+            <h3>Behavior & Clinical Science</h3>
+
+            <p>
+                Bridging research and behavior analysis
+                to inform individualized, meaningful support.
+            </p>
+
+        </article>
+
+    </div>
+</section>
+
+<!-- PUBLICATIONS AND PRESENTATIONS -->
+
+<section class="lavender" id="scholarship">
+<div class="wrap">
+
+    <div class="eyebrow">
+        03 / Academic contributions
+    </div>
+
+    <h2>Research in conversation.</h2>
+
+    <p>
+        A space for my publications, conference presentations,
+        and ongoing scholarly work.
+    </p>
+
+    <p>Selected contributions coming soon.</p>
+
+</div>
+</section>
+
+<!-- TEACHING AND LEADERSHIP -->
+
+<section class="wrap" id="teaching">
+
+    <div class="eyebrow">
+        04 / Beyond the research
+    </div>
+
+    <h2>Scholarship with purpose.</h2>
+
+    <div class="two">
+
+        <div>
+            <h3>Teaching & Mentorship</h3>
+
+            <p>
+                Supporting learning, curiosity, and
+                interdisciplinary thinking in communication
+                sciences and disorders.
+            </p>
+        </div>
+
+        <div>
+            <h3>Leadership & Community</h3>
+
+            <p>
+                Fostering collaboration, community engagement,
+                and inclusive approaches to research and education.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CV -->
+
+<section class="oat" id="cv">
+<div class="wrap">
+
+    <div class="eyebrow">
+        05 / Academic background
+    </div>
+
+    <h2>Curriculum vitae</h2>
+
+    <p>
+        My academic training, research experience,
+        teaching, and professional development.
+    </p>
+
+    <p>Full CV coming soon.</p>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="wrap" id="contact">
+
+    <div class="eyebrow">
+        06 / Get in touch
+    </div>
+
+    <h2>Let's connect.</h2>
+
+    <p>
+        I welcome opportunities for interdisciplinary
+        collaboration, research conversations, and
+        professional connections.
+    </p>
+
+    <a class="button" href="https://github.com/acfigueroa">
+        GitHub
+    </a>
+
+</section>
+
+</main>
+
+<footer>
+    © 2026 Alicia Celeste Figueroa
+</footer>
+
 </body>
 </html>
